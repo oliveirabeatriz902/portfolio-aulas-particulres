@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Web Design Mastery | Responsive Portfolio</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="#">Aulas de Física</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#youtube">YouTube</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="section">
+    <div class="section__container">
+      <div class="content">
+        <p class="subtitle">Olá</p>
+        <h1 class="title">
+          Venha aprender <span>Física</span> comigo!
+        </h1>
+        <p class="paragrafo-inicial">
+          Me chamo Beatriz e estou no último semestre do curso de Física da Universidade de São Paulo (USP). Sou
+          apaixonada por aprender e ensinar física e será um prazer te acompanhar na sua jornada de aprendizagem!
+        </p>
+      </div>
+
+      <div class="image">
+        <img src="assets/fisica.jpg" alt="profile" />
+      </div>
+    </div>
+
+    <div class="experiencia-profissional">
+      <h2 id="experiencia">Experiência Profissional</h2>
+      <p class="paragrafo-descricao">Já fui monitora de Física para alunos do Ensino Médio do Instituto Federal de São
+        Paulo (IFSP) e atualmente leciono aulas de Física para o cursinho popular da Fundação Getulio Vargas (CFGV).</p>
+    </div>
+
+    <div class="youtube">
+      <h2 id="youtube">Conheça meu canal no YouTube</h2>
+      <p class="paragrafo-descricao">Recentemente fiz um canal no YouTube abordando assuntos sobre Física do Ensino Médio e Superior. Clique <a href="https://www.youtube.com/@teorizandoFisica" target="_blank">neste link</a> ou no ícone do Youtube abaixo para conhecer meu canal. Espero que goste!</p>
+      <a href="https://www.youtube.com/@teorizandoFisica" target="_blank">
+        <img class="logos" src="assets/youtube.png" alt="Logo do YouTube">
+      </a>
+    </div>
+
+    <div class="contato">
+      <h2 id="contato">Contato</h2>
+      <p class="paragrafo-descricao">Para saber mais informações sobre Métodos de Aula, preço ou qualquer outro assunto,
+        entre em contato comigo pelo WhatsApp (11978672207 ou clique no ícone do WhatsApp abaixo):</p>
+      <a href="https://wa.me/11978672207" target="_blank">
+        <img class="logos" src="assets/whatsapp.png" alt="Logo do WhatsApp">
+      </a>
+    </div>
+  
+  </section>
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var links = document.querySelectorAll('nav ul li a');
+
+    links.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        var targetId = this.getAttribute('href');
+        var targetElement;
+
+        if (targetId === '#') {
+          // Se for '#', rolar para o topo da página
+          targetElement = document.body;
+        } else {
+          // Caso contrário, encontrar o elemento correspondente
+          targetElement = document.querySelector(targetId);
+        }
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+</html>
