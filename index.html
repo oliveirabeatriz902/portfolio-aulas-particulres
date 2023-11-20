@@ -7,10 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <title>Web Design Mastery | Responsive Portfolio</title>
+  <link rel="shortcut icon" href="assets/atomo-favicon.png " type="image/x-icon">
+  <title>Aulas de Física - Prof. Bia Oliveira</title>
 </head>
 
 <body>
+
   <nav>
     <div class="nav__content">
       <div class="logo"><a href="#">Aulas de Física</a></div>
@@ -40,7 +42,7 @@
       </div>
 
       <div class="image">
-        <img src="assets/fisica.jpg" alt="profile" />
+        <img src="assets/atomo.jpg" alt="profile" />
       </div>
     </div>
 
@@ -52,7 +54,9 @@
 
     <div class="youtube">
       <h2 id="youtube">Conheça meu canal no YouTube</h2>
-      <p class="paragrafo-descricao">Recentemente fiz um canal no YouTube abordando assuntos sobre Física do Ensino Médio e Superior. Clique <a href="https://www.youtube.com/@teorizandoFisica" target="_blank">neste link</a> ou no ícone do Youtube abaixo para conhecer meu canal. Espero que goste!</p>
+      <p class="paragrafo-descricao">Recentemente fiz um canal no YouTube abordando assuntos sobre Física do Ensino
+        Médio e Superior. Clique <a href="https://www.youtube.com/@teorizandoFisica" target="_blank">neste link</a> ou
+        no ícone do Youtube abaixo para conhecer meu canal. Espero que goste!</p>
       <a href="https://www.youtube.com/@teorizandoFisica" target="_blank">
         <img class="logos" src="assets/youtube.png" alt="Logo do YouTube">
       </a>
@@ -62,17 +66,18 @@
       <h2 id="contato">Contato</h2>
       <p class="paragrafo-descricao">Para saber mais informações sobre Métodos de Aula, preço ou qualquer outro assunto,
         entre em contato comigo pelo WhatsApp (11978672207 ou clique no ícone do WhatsApp abaixo):</p>
-      <a href="https://wa.me/11978672207" target="_blank">
+      <a href="https://wa.me/+5511978672207" target="_blank">
         <img class="logos" src="assets/whatsapp.png" alt="Logo do WhatsApp">
       </a>
     </div>
-  
+
   </section>
 </body>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var links = document.querySelectorAll('nav ul li a');
+    var checkbox = document.getElementById('check');
 
     links.forEach(function (link) {
       link.addEventListener('click', function (e) {
@@ -94,6 +99,9 @@
             top: targetElement.offsetTop,
             behavior: 'smooth'
           });
+
+          // Fechar a navegação ao clicar em um link
+          checkbox.checked = false;
         }
       });
     });

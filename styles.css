@@ -48,6 +48,7 @@ nav .logo a {
   color: var(--primary-color);
   transition: 0.3s;
 }
+
 nav .logo a:hover {
   color: var(--primary-color-dark);
 }
@@ -59,6 +60,7 @@ nav .checkbox {
 nav input {
   display: none;
 }
+
 nav .checkbox i {
   font-size: 2rem;
   color: var(--primary-color);
@@ -172,7 +174,7 @@ ul li a:hover {
   border-radius: 100%;
 }
 
-h2{
+h2 {
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 3rem;
@@ -181,7 +183,7 @@ h2{
   text-align: center;
 }
 
-.paragrafo-descricao{
+.paragrafo-descricao {
   line-height: 1.5rem;
   color: var(--text-light);
   margin-bottom: 2rem;
@@ -191,7 +193,7 @@ h2{
   text-align: justify;
 }
 
-.paragrafo-inicial{
+.paragrafo-inicial {
   line-height: 1.5rem;
   color: var(--text-light);
   margin-bottom: 2rem;
@@ -199,18 +201,19 @@ h2{
   text-align: justify;
 }
 
-.logos{
-  width: 2rem; /* Ajuste o tamanho conforme necessário */
+.logos {
+  width: 2rem;
+  /* Ajuste o tamanho conforme necessário */
   display: block;
   margin: 1rem 50%;
   padding-bottom: 1rem;
 }
 
-li{
+li {
   scroll-behavior: smooth;
 }
 
-@media (width < 750px) {
+@media (max-width: 750px) {
   nav .checkbox {
     display: block;
   }
@@ -227,7 +230,7 @@ li{
     gap: 3rem;
   }
 
-  nav #check:checked ~ ul {
+  nav #check:checked~ul {
     left: 0;
   }
 
@@ -249,9 +252,13 @@ li{
     margin: auto;
   }
 
-  .paragrafo-descricao{
+  .paragrafo-descricao {
     margin: 2rem 5%;
     font-size: 1.2rem;
     text-align: justify;
+  }
+
+  .paragrafo-inicial {
+    font-size: 1.2rem;
   }
 }
